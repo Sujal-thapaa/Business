@@ -12,8 +12,9 @@ services:
         value: 3.11.0
 
   # Frontend static site
-  - type: static
+  - type: web
     name: chatbot-frontend
+    env: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     envVars:
